@@ -14,5 +14,24 @@ var Helper =
 		url = url.trim();
 		var r = /\/$/gi;
 		return r.test(url) ? url : url+"/";
-	}//eof
+	},//eof
+	
+	
+
+	GetValidFileName: function(str)
+	{
+		return str.replace(/[~\\\/:\*\?"<>\|]/i, "").trim();
+	},//eof
+	
+	
+	GetFileName: function(str)
+	{
+		str = str.trim();
+		
+		var r = /.*[\\\/]([^\\\/]+)\.([\d\w]+).*?$/i;
+			
+		var o = r.exec(str);
+		
+		return [ o[1]+'.'+o[2], o[1], o[2]];
+	}
 };//eoc
