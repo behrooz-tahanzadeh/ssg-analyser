@@ -1,0 +1,5 @@
+- src: "assets/js/jquery.min.js"
+- src: "assets/js/SSG.js"
+- src: "assets/js/helper.js"
+
+- src: "assets/js/analyser/archdaily.com.js"
