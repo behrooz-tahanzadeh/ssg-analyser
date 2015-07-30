@@ -3,7 +3,7 @@ var Helper =
 	AddHttp: function(url)
 	{
 		url = url.trim();
-		var r = /^http:\/\//i;
+		var r = /^https?:\/\//i;
 		return r.test(url) ? url : "http://"+url;
 	},//eof
 
@@ -14,6 +14,16 @@ var Helper =
 		url = url.trim();
 		var r = /\/$/gi;
 		return r.test(url) ? url : url+"/";
+	},//eof
+	
+	
+	
+	RemoveForwardSlash: function(url)
+	{
+		url = url.trim();
+		var r = /(.*?)\/$/i;
+		
+		return r.test(url) ? r.exec(url)[1] : url;
 	},//eof
 	
 	

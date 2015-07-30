@@ -3,3 +3,4 @@
 - src: "assets/js/helper.js"
 
 - src: "assets/js/analyser/archdaily.com.js"
+- src: "assets/js/analyser/board.pinterest.com.js"
